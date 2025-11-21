@@ -1,0 +1,5 @@
+TO DO 
+
+- my init service function in my backend needs a name. So that whole pipeline needs to accept name as a parameter and pass it to the next layer
+  - my recc is to delete init service logic and simply return the name of the parent directory as a proof of concept. 
+  - for the future: that same service is going to have to send text back to the cli so that the file can be created. so the pipeline needs to go two way

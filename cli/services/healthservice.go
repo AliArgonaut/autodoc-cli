@@ -10,7 +10,7 @@ func HealthCheck() error {
 	fmt.Println("checking health of auto-doc backend servers...")
 	resp, err := http.Get("http://localhost:8000/api/health")
 	if err != nil {
-		fmt.Println("unable to query auto-doc backend servers...try again later")
+		fmt.Println("unable to query auto-doc backend server...try again later (maybe our agents are sleeping)")
 	}
 	defer resp.Body.Close()
 	body, err := io.ReadAll(resp.Body)

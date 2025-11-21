@@ -1,8 +1,10 @@
 package models
 
 type ConfigTemplate struct {
-	name        string   `json:"app_name"`
-	developer   string   `json:"created by"`
-	description string   `json:description`
-	ignore      []string `json:"ignore"`
+	Name        string   `json:"app_name"`
+	Developer   string   `json:"created by"`
+	Description string   `json:"description"`
+	Ignore      []string `json:"ignore"`
 }
+
+func NewConfigTemplate(name string) ConfigTemplate

@@ -1,8 +1,9 @@
 package services
 
 import "fmt"
+import "cli/models"
 
 func AutodocInitService() {
 	fmt.Println("auto doc init service init")
-	//api call goes here too
+	models.NewConfigTemplate()
 }
