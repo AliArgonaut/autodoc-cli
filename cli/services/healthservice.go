@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func ShowIntegrated() {
+func HealthCheck() {
 	fmt.Println("initializing auto-doc...")
 	//code that calls the fastapi api
 }

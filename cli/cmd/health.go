@@ -10,7 +10,7 @@ var healthCmd = &cobra.Command{
 	Short: "tests health and connectivity of auto-doc ai agent backends",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		services.ShowIntegrated()
+		services.ShowIntegrated() //calls services layer
 	},
 }
 
