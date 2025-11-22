@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class ConfigTemplate(BaseModel):
+class ConfigSchema(BaseModel):
     name: str
     developer: str
     description: str
