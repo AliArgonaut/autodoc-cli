@@ -5,6 +5,7 @@ import (
 )
 
 func GenerateService() {
+	opts := GetIgnoredFilesService()
 	tree := BuildTreeService()
 	fmt.Println(tree)
 }

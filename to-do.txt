@@ -1,7 +1,6 @@
-TO DO 
+the newest issue is relating to the generate service, the build tree service, and the get ignored files service
 
-working on generate services. first step is creating json representation of cwd file tree for agent context
-have defined basic struct for teenodes, and the code that uses them wojl dbe in generateservice. 
+I want the get ignored files service to return an array of ignored files, 
+a cwd, and an error. 
 
-the ultimate goal is to create a batch of metadata to send the agent layer, and a tree structure will have to be one of them. 
-
+the cwd will be used in the build tree service (so i dont have to do the sme operation twice)...or maybe i have the cwd fetching be its own service. either way this is about separation of concerns. the code to get the cwd is in the generate service service iirc. I already know the logic ot generate the tree its in there somehwere.I just have to apply ignore rules to minimize token usage , and throw erorrs if autodoc init has not been run yet
