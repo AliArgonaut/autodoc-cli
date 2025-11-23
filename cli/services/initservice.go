@@ -26,7 +26,7 @@ func AutodocInitService() {
 
 // add code that creates the file from response body here
 func GenerateConfigInPath(content string) {
-	defaultName := "auto-doc_config.json"
+	defaultName := "autodoc_config.json"
 	err := os.WriteFile(defaultName, []byte(content), 0644)
 	if err != nil {
 		fmt.Println("error writing file")
