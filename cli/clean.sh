@@ -1,4 +1,5 @@
 #!/bin/bash
+#for creating new executables and deleted testing files
 
 # Set filenames
 EXECUTABLE="autodoc"

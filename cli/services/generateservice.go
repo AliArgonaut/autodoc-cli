@@ -18,6 +18,7 @@ func GenerateService() {
 
 	ignoredFiles := utils.GetIgnoredFiles(config)
 	description := utils.GetDescription(config)
+	fmt.Println(description) //just to stop unused warning
 	node := utils.BuildTree(cwd, name, ignoredFiles)
 	json := utils.ConvertTreeToJSON(node)
 	fmt.Println(json)
