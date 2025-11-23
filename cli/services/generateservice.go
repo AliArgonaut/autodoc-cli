@@ -20,7 +20,7 @@ func GenerateService() {
 	description := utils.GetDescription(config)
 	fmt.Println(description) //just to stop unused warning
 	node := utils.BuildTree(cwd, name, ignoredFiles)
-	json := utils.ConvertTreeToJSON(node)
-	fmt.Println(json)
+	treeAsJSON := utils.ConvertTreeToJSON(node)
+	fmt.Println(treeAsJSON)
 	// from here youd need to figure out what other context to send and send it over to the agents as an octet stream
 }

@@ -28,8 +28,10 @@ func BuildTree(cwd string, name string, ignored []string) models.TreeNode {
 		}
 
 		if !isIgnored && file.IsDir() {
+			Treenode.FileType = "Folder"
 			Treenode.Children = append(Treenode.Children, BuildTree(filepath.Join(cwd, file.Name()), file.Name(), ignored))
 		} else if !isIgnored && !file.IsDir() {
+			Treenode.FileType = "File"
 			Treenode.Children = append(Treenode.Children, models.TreeNode{
 				Name: file.Name(),
 				Path: filepath.Join(cwd, file.Name()),
