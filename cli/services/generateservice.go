@@ -3,22 +3,23 @@ package services
 import (
 	"cli/services/utils"
 	"fmt"
+	"log"
 )
 
 func GenerateService() {
 
-	cwd := utils.GetParentDirectory()
-	// fmt.Println("cwd::::::::::  " + cwd)
-	name := utils.GetNameFromPath(cwd)
-	// fmt.Println("name::::::::::  " + name)
+	cwd := utils.GetParentDirectory()  //obvious
+	name := utils.GetNameFromPath(cwd) //
 
-	ignoredFiles, err := utils.GetIgnoredFiles(cwd)
+	config, err := utils.GetJSONData(cwd)
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalln(err)
 	}
-	//	fmt.Println("ignoredFiles::::::::::  " + ignoredFiles[1])
+
+	ignoredFiles := utils.GetIgnoredFiles(config)
+	description := utils.GetDescription(config)
 	node := utils.BuildTree(cwd, name, ignoredFiles)
 	json := utils.ConvertTreeToJSON(node)
-	// fmt.Println(json)
+	fmt.Println(json)
 	// from here youd need to figure out what other context to send and send it over to the agents as an octet stream
 }

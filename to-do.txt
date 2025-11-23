@@ -6,11 +6,11 @@ a cwd, and an error.
 
 the cwd will be used in the build tree service (so i dont have to do the sme operation twice)...or maybe i have the cwd fetching be its own service. either way this is about separation of concerns. the code to get the cwd is in the generate service service iirc. I already know the logic ot generate the tree its in there somehwere.I just have to apply ignore rules to minimize token usage , and throw erorrs if autodoc init has not been run yet
 
-saturday 11:40pm ==================================================================================================================================================
+saturday 11:40pm ================================================================================================================================================
 THIS PROJECTS MAJOR CHALLENGES SO FAR 
 
 1. CREATING A FILE TREE WITH RECURSIVE FUNCTION
-2. THE WAY IGNORING FILES WORKS EFFICIENTLY AND QUICKLY WITH STRING MAP STRUCTS
+2. THE WAY IGNORING FILES WORKS EFFICIENTLY AND QUICKLY WITH STRUCTS
 
 
 sunday 3:00am ===================================================================================================================================================
