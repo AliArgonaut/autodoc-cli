@@ -1,4 +1,4 @@
-package services
+package utils
 
 import (
 	"cli/models"
@@ -8,16 +8,14 @@ import (
 	"path/filepath"
 )
 
-func BuildTreeService() string {
+func BuildTreeService(cwd string, name string, entries []os.DirEntry) string {
 
-	cwd := GetCWD()
-	name := GetName(cwd)
-	tree := BuildTree(cwd, name)
+	tree := BuildTree(cwd, name, entries)
 	treeAsString := convertToJson(tree)
 	return treeAsString
 }
 
-func BuildTree(cwd string, name string) models.TreeNode {
+func BuildTree(cwd string, name string, entries []os.DirEntry) models.TreeNode {
 	Treenode := models.TreeNode{}
 	Treenode.Name = name
 	Treenode.Path = cwd
