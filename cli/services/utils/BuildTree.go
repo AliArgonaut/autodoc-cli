@@ -41,20 +41,3 @@ func BuildTree(cwd string, name string, ignored []string) models.TreeNode {
 	}
 	return Treenode
 }
-
-//	entries, err := os.ReadDir(cwd)
-//	if err != nil {
-//		log.Fatalln(err)
-//	}
-//	for _, entry := range entries {
-//		if entry.IsDir() {
-//			Treenode.Children = append(Treenode.Children, BuildTree(filepath.Join(cwd, entry.Name()), entry.Name()))
-//		} else {
-//			Treenode.Children = append(Treenode.Children, models.TreeNode{
-//				Name: entry.Name(),
-//				Path: filepath.Join(cwd, entry.Name()),
-//			})
-//		}
-//	}
-//
-//	return Treenode
