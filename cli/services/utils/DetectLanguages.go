@@ -6,30 +6,30 @@ import (
 	"strings"
 )
 
+// MAIN FUNCTION ====================================================================
 func DetectLanguages(tree models.TreeNode) ([]string, []string) {
 
 	allFilePaths := TraverseTreeForPaths(tree)
-	fmt.Println("all file paths vvvvv")
 	fmt.Println(allFilePaths)
 	goFiles, pyFiles := SeparateFileTypes(allFilePaths)
 	return goFiles, pyFiles
 }
 
+// TRAVERSE TREE FOR PATHS ==========================================================
 func TraverseTreeForPaths(tree models.TreeNode) []string {
 	allPaths := []string{}
-	if tree.FileType == "File" {
-		fmt.Println("filetype is file path::::::::::", tree.Path)
+	if tree.FileType == "f" {
 		allPaths = append(allPaths, tree.Path)
-		return allPaths
 	} else {
 		for i, _ := range tree.Children {
-			TraverseTreeForPaths(tree.Children[i])
+			childPaths := TraverseTreeForPaths(tree.Children[i])
+			allPaths = append(allPaths, childPaths...)
 		}
 	}
-	fmt.Println("all PATHS INNER FUNC:=====", allPaths)
 	return allPaths
 }
 
+// SEPERATE FILE TYPES ===============================================================
 func SeparateFileTypes(paths []string) ([]string, []string) {
 	var goFilePaths = []string{}
 	var pyFilePaths = []string{}

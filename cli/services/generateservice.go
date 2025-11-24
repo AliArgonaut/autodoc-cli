@@ -18,7 +18,7 @@ func GenerateService() {
 
 	ignoredFiles := utils.GetIgnoredFiles(config)
 	description := utils.GetDescription(config)
-	node := utils.BuildTree(cwd, name, ignoredFiles, "Folder")
+	node := utils.BuildTree(cwd, name, ignoredFiles, "d")
 	treeAsJSON := utils.ConvertTreeToJSON(node)
 
 	goFiles, pyFiles := utils.DetectLanguages(node)
