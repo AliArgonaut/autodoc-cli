@@ -17,3 +17,8 @@ echo "Building new executable..."
 go build -o "$EXECUTABLE"
 
 echo "Done."
+
+echo "running commands"
+./autodoc health
+./autodoc init
+./autodoc generate > "output.txt"

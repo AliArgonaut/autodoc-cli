@@ -8,10 +8,11 @@ import (
 	"strings"
 )
 
-func BuildTree(cwd string, name string, ignored []string) models.TreeNode {
+func BuildTree(cwd string, name string, ignored []string, filetype string) models.TreeNode {
 	Treenode := models.TreeNode{}
 	Treenode.Name = name
 	Treenode.Path = cwd
+	Treenode.FileType = filetype
 
 	files, err := os.ReadDir(cwd)
 	if err != nil {
@@ -28,13 +29,12 @@ func BuildTree(cwd string, name string, ignored []string) models.TreeNode {
 		}
 
 		if !isIgnored && file.IsDir() {
-			Treenode.FileType = "Folder"
-			Treenode.Children = append(Treenode.Children, BuildTree(filepath.Join(cwd, file.Name()), file.Name(), ignored))
+			Treenode.Children = append(Treenode.Children, BuildTree(filepath.Join(cwd, file.Name()), file.Name(), ignored, "Folder"))
 		} else if !isIgnored && !file.IsDir() {
-			Treenode.FileType = "File"
 			Treenode.Children = append(Treenode.Children, models.TreeNode{
-				Name: file.Name(),
-				Path: filepath.Join(cwd, file.Name()),
+				Name:     file.Name(),
+				Path:     filepath.Join(cwd, file.Name()),
+				FileType: "File",
 			})
 		} else {
 			continue

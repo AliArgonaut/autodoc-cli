@@ -8,8 +8,8 @@ import (
 
 func GenerateService() {
 
-	cwd := utils.GetParentDirectory()  //obvious
-	name := utils.GetNameFromPath(cwd) //
+	cwd := utils.GetParentDirectory()
+	name := utils.GetNameFromPath(cwd)
 
 	config, err := utils.GetJSONData(cwd)
 	if err != nil {
@@ -18,9 +18,17 @@ func GenerateService() {
 
 	ignoredFiles := utils.GetIgnoredFiles(config)
 	description := utils.GetDescription(config)
-	fmt.Println(description) //just to stop unused warning
-	node := utils.BuildTree(cwd, name, ignoredFiles)
+	node := utils.BuildTree(cwd, name, ignoredFiles, "Folder")
 	treeAsJSON := utils.ConvertTreeToJSON(node)
+
+	goFiles, pyFiles := utils.DetectLanguages(node)
+
+	fmt.Println("========================================================================")
+	fmt.Println(description) //just to stop unused warning
+	fmt.Println("========================================================================")
 	fmt.Println(treeAsJSON)
-	// from here youd need to figure out what other context to send and send it over to the agents as an octet stream
+	fmt.Println("========================================================================")
+	fmt.Println(goFiles)
+	fmt.Println(pyFiles)
+	fmt.Println("==========================================================================")
 }
