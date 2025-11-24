@@ -7,7 +7,7 @@ import (
 )
 
 func ConvertTreeToJSON(tree models.TreeNode) string {
-	jsonBytes, err := json.MarshalIndent(tree, "", "    ")
+	jsonBytes, err := json.Marshal(tree) //marshalIndent(tree, "", "   ") makes pretty JSON, but we want token efficiency
 	if err != nil {
 		log.Fatalln("failed to marshall json data")
 	}
