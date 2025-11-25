@@ -19,14 +19,16 @@ func GenerateService() {
 	ignoredFiles := utils.GetIgnoredFiles(config)
 	// description := utils.GetDescription(config)
 	node := utils.BuildTree(cwd, name, ignoredFiles, "d")
-	treeAsJSON := utils.ConvertTreeToJSON(node)
+	//treeAsJSON := utils.ConvertTreeToJSON(node)
 
 	goFiles, pyFiles := utils.DetectLanguages(node)
+	print(goFiles)
+	GoLanguageService(cwd, goFiles)
 
 	//fmt.Println("========================================================================")
 	//fmt.Println(description) //just to stop unused warning
 	//fmt.Println("========================================================================")
-	fmt.Println(treeAsJSON)
+	//fmt.Println(treeAsJSON)
 	fmt.Println("========================================================================")
 	fmt.Println(goFiles)
 	fmt.Println(pyFiles)
