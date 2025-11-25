@@ -6,10 +6,10 @@ import (
 	"log"
 )
 
-func ConvertTreeToJSON(tree models.TreeNode) string {
+func ConvertTreeToJSON(tree models.TreeNode) []byte {
 	jsonBytes, err := json.Marshal(tree) //marshalIndent(tree, "", "   ") makes pretty JSON, but we want token efficiency
 	if err != nil {
 		log.Fatalln("failed to marshall json data")
 	}
-	return (string(jsonBytes))
+	return (jsonBytes)
 }

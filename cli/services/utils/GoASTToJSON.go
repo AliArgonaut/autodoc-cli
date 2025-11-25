@@ -1,19 +1,24 @@
 package utils
 
-import "log"
+//import "log"
 
 import "cli/models"
 import "encoding/json"
 
-func GoASTTOJSON(arr []models.ASTFile) string {
-	var results = ""
-
-	for _, model := range arr {
-		jsonBytes, err := json.Marshal(model)
-		if err != nil {
-			log.Fatalln("failed to marshall json data")
-		}
-		results += string(jsonBytes)
+func GoASTTOJSON(arr []models.ASTFile) []byte {
+	//var bytes []byte
+	jsonBytes, err := json.Marshal(arr)
+	if err != nil {
+		panic(err)
 	}
-	return results
+	return jsonBytes
+	//	for _, model := range arr {
+	//		jsonBytes, err := json.Marshal(model)
+	//
+	//	/		if err != nil {
+	//				log.Fatalln("failed to marshall json data")
+	//			}
+	//			bytes = append(bytes, jsonBytes...)
+	//		}
+	//		return bytes
 }
