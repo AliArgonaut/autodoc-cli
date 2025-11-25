@@ -1,89 +1,27 @@
-[/home/ali/Desktop/Agentia_v1.0/cli/autodoc /home/ali/Desktop/Agentia_v1.0/cli/autodoc_config.json /home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go /home/ali/Desktop/Agentia_v1.0/cli/go.mod /home/ali/Desktop/Agentia_v1.0/cli/go.sum /home/ali/Desktop/Agentia_v1.0/cli/main.go /home/ali/Desktop/Agentia_v1.0/cli/models/config.go /home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go /home/ali/Desktop/Agentia_v1.0/cli/output.txt /home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go /home/ali/Desktop/Agentia_v1.0/cli/test.sh]
+[/home/ali/Desktop/Agentia_v1.0/cli/autodoc /home/ali/Desktop/Agentia_v1.0/cli/autodoc_config.json /home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go /home/ali/Desktop/Agentia_v1.0/cli/go.mod /home/ali/Desktop/Agentia_v1.0/cli/go.sum /home/ali/Desktop/Agentia_v1.0/cli/main.go /home/ali/Desktop/Agentia_v1.0/cli/models/astrep.go /home/ali/Desktop/Agentia_v1.0/cli/models/config.go /home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go /home/ali/Desktop/Agentia_v1.0/cli/output.txt /home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go /home/ali/Desktop/Agentia_v1.0/cli/test.sh]
 /home/ali/Desktop/Agentia_v1.0/cli
-[/home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go /home/ali/Desktop/Agentia_v1.0/cli/main.go /home/ali/Desktop/Agentia_v1.0/cli/models/config.go /home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go /home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go]
+[/home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go /home/ali/Desktop/Agentia_v1.0/cli/main.go /home/ali/Desktop/Agentia_v1.0/cli/models/astrep.go /home/ali/Desktop/Agentia_v1.0/cli/models/config.go /home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go /home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go]
 PATH/home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go
-Function: init
-Parameters: &{418 [] 419}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go
-Function: init
-Parameters: &{411 [] 412}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go
-Function: init
-Parameters: &{429 [] 430}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go
-Function: Execute
-Parameters: &{574 [] 575}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/main.go
-Function: main
-Parameters: &{51 [] 52}
-Results: <nil>
+PATH/home/ali/Desktop/Agentia_v1.0/cli/models/astrep.go
 PATH/home/ali/Desktop/Agentia_v1.0/cli/models/config.go
 PATH/home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go
-Function: GenerateService
-Parameters: &{87 [] 88}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go
-Function: GoLanguageService
-Parameters: &{118 [0xc00018e780 0xc00018e7c0] 145}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go
-Function: HealthCheck
-Parameters: &{72 [] 73}
-Results: &{0 [0xc00018f040] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go
-Function: AutodocInitService
-Parameters: &{85 [] 86}
-Results: <nil>
-Function: GenerateConfigInPath
-Parameters: &{620 [0xc00018f880] 635}
-Results: <nil>
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go
-Function: BuildTree
-Parameters: &{97 [0xc00018fc40 0xc00018fc80 0xc00018fcc0 0xc00018fd00] 156}
-Results: &{0 [0xc00018fd40] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go
-Function: ConvertTreeToJSON
-Parameters: &{88 [0xc0001a2880] 109}
-Results: &{0 [0xc0001a28c0] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go
-Function: DetectLanguages
-Parameters: &{166 [0xc0001a2b80] 187}
-Results: &{189 [0xc0001a2bc0 0xc0001a2c00] 208}
-Function: TraverseTreeForPaths
-Parameters: &{476 [0xc0001a2dc0] 497}
-Results: &{0 [0xc0001a2e00] 0}
-Function: SeparateFileTypes
-Parameters: &{886 [0xc0001a3140] 901}
-Results: &{903 [0xc0001a3180 0xc0001a31c0] 922}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go
-Function: GetDescription
-Parameters: &{61 [0xc0001a36c0] 79}
-Results: &{0 [0xc0001a3700] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go
-Function: GetIgnoredFiles
-Parameters: &{62 [0xc0001a3800] 80}
-Results: &{0 [0xc0001a3840] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go
-Function: GetJSONData
-Parameters: &{222 [0xc0001a39c0] 231}
-Results: &{233 [0xc0001a3a00 0xc0001a3a40] 254}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go
-Function: GetNameFromPath
-Parameters: &{60 [0xc0001ae040] 69}
-Results: &{0 [0xc0001ae080] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go
-Function: GetParentDirectory
-Parameters: &{64 [] 65}
-Results: &{0 [0xc0001ae1c0] 0}
 PATH/home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go
-Function: GetTextFromFile
-Parameters: &{64 [0xc0001ae440] 76}
-Results: &{78 [0xc0001ae480 0xc0001ae4c0] 92}
 ========================================================================
-[/home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go /home/ali/Desktop/Agentia_v1.0/cli/main.go /home/ali/Desktop/Agentia_v1.0/cli/models/config.go /home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go /home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go]
+[/home/ali/Desktop/Agentia_v1.0/cli/cmd/generate.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/health.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/init.go /home/ali/Desktop/Agentia_v1.0/cli/cmd/root.go /home/ali/Desktop/Agentia_v1.0/cli/main.go /home/ali/Desktop/Agentia_v1.0/cli/models/astrep.go /home/ali/Desktop/Agentia_v1.0/cli/models/config.go /home/ali/Desktop/Agentia_v1.0/cli/models/treenode.go /home/ali/Desktop/Agentia_v1.0/cli/services/generateservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/golanguageservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/healthservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/initservice.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/BuildTree.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/ConvertTreeToJSON.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/DetectLanguages.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetDescription.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetIgnoredFiles.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetJSONData.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetNameFromPath.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetParentDirectory.go /home/ali/Desktop/Agentia_v1.0/cli/services/utils/GetTextFromFile.go]
 []
