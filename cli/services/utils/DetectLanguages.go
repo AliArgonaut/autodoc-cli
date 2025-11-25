@@ -2,7 +2,6 @@ package utils
 
 import (
 	"cli/models"
-	"fmt"
 	"strings"
 )
 
@@ -10,7 +9,6 @@ import (
 func DetectLanguages(tree models.TreeNode) ([]string, []string) {
 
 	allFilePaths := TraverseTreeForPaths(tree)
-	fmt.Println(allFilePaths)
 	goFiles, pyFiles := SeparateFileTypes(allFilePaths)
 	return goFiles, pyFiles
 }

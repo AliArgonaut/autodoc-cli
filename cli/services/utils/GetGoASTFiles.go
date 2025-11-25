@@ -1,20 +1,15 @@
-package services
+package utils
 
 import (
-	"bytes"
 	"cli/models"
-	"fmt"
 	"go/ast"
 	"go/parser"
-	"go/printer"
 	"go/token"
 	"os"
 	"path/filepath"
 )
 
-func GoLanguageService(cwd string, paths []string) {
-	fmt.Println(cwd)
-	fmt.Println(paths)
+func GetGoASTFiles(cwd string, paths []string) []models.ASTFile {
 
 	var astFiles []models.ASTFile
 
@@ -23,7 +18,6 @@ func GoLanguageService(cwd string, paths []string) {
 			Name:       filepath.Base(path),
 			Signatures: []models.Signature{},
 		}
-		fmt.Println("PATH" + path)
 		src, err := os.ReadFile(path)
 		if err != nil {
 			panic(err)
@@ -39,8 +33,8 @@ func GoLanguageService(cwd string, paths []string) {
 			if fn, ok := n.(*ast.FuncDecl); ok {
 				sig := models.Signature{
 					Name:    fn.Name.Name,
-					Params:  astFieldListToString(fn.Type.Params),
-					Results: astFieldListToString(fn.Type.Results),
+					Params:  ASTFieldListToString(fn.Type.Params),
+					Results: ASTFieldListToString(fn.Type.Results),
 				}
 				files.Signatures = append(files.Signatures, sig)
 			}
@@ -48,25 +42,5 @@ func GoLanguageService(cwd string, paths []string) {
 		})
 		astFiles = append(astFiles, files)
 	}
-}
-
-func astFieldListToString(fields *ast.FieldList) []string {
-	if fields == nil {
-		return nil
-	}
-	var results []string
-	for _, field := range fields.List {
-		var buf bytes.Buffer
-		printer.Fprint(&buf, token.NewFileSet(), field.Type)
-		typeStr := buf.String()
-
-		if len(field.Names) == 0 {
-			results = append(results, typeStr)
-		} else {
-			for _, name := range field.Names {
-				results = append(results, name.Name+": "+typeStr)
-			}
-		}
-	}
-	return results
+	return astFiles
 }
