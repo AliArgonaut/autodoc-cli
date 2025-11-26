@@ -1,1956 +1,232 @@
-{
-  "detail": [
-    {
-      "type": "missing",
-      "loc": [
-        "body",
-        "appname"
-      ],
-      "msg": "Field required",
-      "input": {
-        "n": "Autodoc CLI",
-        "d": "This is the cli layer for a CLI application that auto-documents code.",
-        "t": {
-          "n": "cli",
-          "t": "d",
-          "c": [
-            {
-              "n": "autodoc",
-              "t": "f"
-            },
-            {
-              "n": "autodoc_config.json",
-              "t": "f"
-            },
-            {
-              "n": "cmd",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generate.go",
-                  "t": "f"
-                },
-                {
-                  "n": "health.go",
-                  "t": "f"
-                },
-                {
-                  "n": "init.go",
-                  "t": "f"
-                },
-                {
-                  "n": "root.go",
-                  "t": "f"
-                }
-              ]
-            },
-            {
-              "n": "go.mod",
-              "t": "f"
-            },
-            {
-              "n": "go.sum",
-              "t": "f"
-            },
-            {
-              "n": "main.go",
-              "t": "f"
-            },
-            {
-              "n": "models",
-              "t": "d",
-              "c": [
-                {
-                  "n": "AgentRequestParams.go",
-                  "t": "f"
-                },
-                {
-                  "n": "astrep.go",
-                  "t": "f"
-                },
-                {
-                  "n": "config.go",
-                  "t": "f"
-                },
-                {
-                  "n": "treenode.go",
-                  "t": "f"
-                }
-              ]
-            },
-            {
-              "n": "output.txt",
-              "t": "f"
-            },
-            {
-              "n": "services",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generateservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "healthservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "initservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "utils",
-                  "t": "d",
-                  "c": [
-                    {
-                      "n": "ASTFieldListToString.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "BuildTree.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "ConvertTreeToJSON.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "DetectLanguages.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetAppName.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetDescription.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetGoASTFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetIgnoredFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetJSONData.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetNameFromPath.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetParentDirectory.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetTextFromFile.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GoASTToJSON.go",
-                      "t": "f"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "n": "test.sh",
-              "t": "f"
-            }
-          ]
-        },
-        "a": [
-          {
-            "f": "generate.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "health.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "init.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "root.go",
-            "s": [
-              {
-                "n": "Execute",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "main.go",
-            "s": [
-              {
-                "n": "main",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "AgentRequestParams.go",
-            "s": []
-          },
-          {
-            "f": "astrep.go",
-            "s": []
-          },
-          {
-            "f": "config.go",
-            "s": []
-          },
-          {
-            "f": "treenode.go",
-            "s": []
-          },
-          {
-            "f": "generateservice.go",
-            "s": [
-              {
-                "n": "GenerateService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "sendAgentParamsToAgentLayer",
-                "p": [
-                  "req: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "healthservice.go",
-            "s": [
-              {
-                "n": "HealthCheck",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "initservice.go",
-            "s": [
-              {
-                "n": "AutodocInitService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "GenerateConfigInPath",
-                "p": [
-                  "content: "
-                ],
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "ASTFieldListToString.go",
-            "s": [
-              {
-                "n": "ASTFieldListToString",
-                "p": [
-                  "fields: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "BuildTree.go",
-            "s": [
-              {
-                "n": "BuildTree",
-                "p": [
-                  "cwd: ",
-                  "name: ",
-                  "ignored: ",
-                  "filetype: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "ConvertTreeToJSON.go",
-            "s": [
-              {
-                "n": "ConvertTreeToJSON",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "DetectLanguages.go",
-            "s": [
-              {
-                "n": "DetectLanguages",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              },
-              {
-                "n": "TraverseTreeForPaths",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              },
-              {
-                "n": "SeparateFileTypes",
-                "p": [
-                  "paths: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetAppName.go",
-            "s": [
-              {
-                "n": "GetAppName",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetDescription.go",
-            "s": [
-              {
-                "n": "GetDescription",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetGoASTFiles.go",
-            "s": [
-              {
-                "n": "GetGoASTFiles",
-                "p": [
-                  "cwd: ",
-                  "paths: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetIgnoredFiles.go",
-            "s": [
-              {
-                "n": "GetIgnoredFiles",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetJSONData.go",
-            "s": [
-              {
-                "n": "GetJSONData",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetNameFromPath.go",
-            "s": [
-              {
-                "n": "GetNameFromPath",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetParentDirectory.go",
-            "s": [
-              {
-                "n": "GetParentDirectory",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetTextFromFile.go",
-            "s": [
-              {
-                "n": "GetTextFromFile",
-                "p": [
-                  "path: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GoASTToJSON.go",
-            "s": [
-              {
-                "n": "GoASTTOJSON",
-                "p": [
-                  "arr: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          }
-        ]
-      }
+n='Autodoc CLI' d='This is the cli layer for a CLI application that auto-documents code.' t={'n': 'cli', 't': 'd', 'c': [
+    {'n': 'autodoc', 't': 'f'
     },
-    {
-      "type": "missing",
-      "loc": [
-        "body",
-        "description"
-      ],
-      "msg": "Field required",
-      "input": {
-        "n": "Autodoc CLI",
-        "d": "This is the cli layer for a CLI application that auto-documents code.",
-        "t": {
-          "n": "cli",
-          "t": "d",
-          "c": [
-            {
-              "n": "autodoc",
-              "t": "f"
-            },
-            {
-              "n": "autodoc_config.json",
-              "t": "f"
-            },
-            {
-              "n": "cmd",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generate.go",
-                  "t": "f"
-                },
-                {
-                  "n": "health.go",
-                  "t": "f"
-                },
-                {
-                  "n": "init.go",
-                  "t": "f"
-                },
-                {
-                  "n": "root.go",
-                  "t": "f"
-                }
-              ]
-            },
-            {
-              "n": "go.mod",
-              "t": "f"
-            },
-            {
-              "n": "go.sum",
-              "t": "f"
-            },
-            {
-              "n": "main.go",
-              "t": "f"
-            },
-            {
-              "n": "models",
-              "t": "d",
-              "c": [
-                {
-                  "n": "AgentRequestParams.go",
-                  "t": "f"
-                },
-                {
-                  "n": "astrep.go",
-                  "t": "f"
-                },
-                {
-                  "n": "config.go",
-                  "t": "f"
-                },
-                {
-                  "n": "treenode.go",
-                  "t": "f"
-                }
-              ]
-            },
-            {
-              "n": "output.txt",
-              "t": "f"
-            },
-            {
-              "n": "services",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generateservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "healthservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "initservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "utils",
-                  "t": "d",
-                  "c": [
-                    {
-                      "n": "ASTFieldListToString.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "BuildTree.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "ConvertTreeToJSON.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "DetectLanguages.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetAppName.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetDescription.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetGoASTFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetIgnoredFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetJSONData.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetNameFromPath.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetParentDirectory.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetTextFromFile.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GoASTToJSON.go",
-                      "t": "f"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "n": "test.sh",
-              "t": "f"
-            }
-          ]
-        },
-        "a": [
-          {
-            "f": "generate.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "health.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "init.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "root.go",
-            "s": [
-              {
-                "n": "Execute",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "main.go",
-            "s": [
-              {
-                "n": "main",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "AgentRequestParams.go",
-            "s": []
-          },
-          {
-            "f": "astrep.go",
-            "s": []
-          },
-          {
-            "f": "config.go",
-            "s": []
-          },
-          {
-            "f": "treenode.go",
-            "s": []
-          },
-          {
-            "f": "generateservice.go",
-            "s": [
-              {
-                "n": "GenerateService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "sendAgentParamsToAgentLayer",
-                "p": [
-                  "req: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "healthservice.go",
-            "s": [
-              {
-                "n": "HealthCheck",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "initservice.go",
-            "s": [
-              {
-                "n": "AutodocInitService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "GenerateConfigInPath",
-                "p": [
-                  "content: "
-                ],
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "ASTFieldListToString.go",
-            "s": [
-              {
-                "n": "ASTFieldListToString",
-                "p": [
-                  "fields: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "BuildTree.go",
-            "s": [
-              {
-                "n": "BuildTree",
-                "p": [
-                  "cwd: ",
-                  "name: ",
-                  "ignored: ",
-                  "filetype: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "ConvertTreeToJSON.go",
-            "s": [
-              {
-                "n": "ConvertTreeToJSON",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "DetectLanguages.go",
-            "s": [
-              {
-                "n": "DetectLanguages",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              },
-              {
-                "n": "TraverseTreeForPaths",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              },
-              {
-                "n": "SeparateFileTypes",
-                "p": [
-                  "paths: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetAppName.go",
-            "s": [
-              {
-                "n": "GetAppName",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetDescription.go",
-            "s": [
-              {
-                "n": "GetDescription",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetGoASTFiles.go",
-            "s": [
-              {
-                "n": "GetGoASTFiles",
-                "p": [
-                  "cwd: ",
-                  "paths: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetIgnoredFiles.go",
-            "s": [
-              {
-                "n": "GetIgnoredFiles",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetJSONData.go",
-            "s": [
-              {
-                "n": "GetJSONData",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetNameFromPath.go",
-            "s": [
-              {
-                "n": "GetNameFromPath",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetParentDirectory.go",
-            "s": [
-              {
-                "n": "GetParentDirectory",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetTextFromFile.go",
-            "s": [
-              {
-                "n": "GetTextFromFile",
-                "p": [
-                  "path: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GoASTToJSON.go",
-            "s": [
-              {
-                "n": "GoASTTOJSON",
-                "p": [
-                  "arr: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          }
-        ]
-      }
+    {'n': 'autodoc_config.json', 't': 'f'
     },
-    {
-      "type": "missing",
-      "loc": [
-        "body",
-        "filetree"
-      ],
-      "msg": "Field required",
-      "input": {
-        "n": "Autodoc CLI",
-        "d": "This is the cli layer for a CLI application that auto-documents code.",
-        "t": {
-          "n": "cli",
-          "t": "d",
-          "c": [
-            {
-              "n": "autodoc",
-              "t": "f"
-            },
-            {
-              "n": "autodoc_config.json",
-              "t": "f"
-            },
-            {
-              "n": "cmd",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generate.go",
-                  "t": "f"
-                },
-                {
-                  "n": "health.go",
-                  "t": "f"
-                },
-                {
-                  "n": "init.go",
-                  "t": "f"
-                },
-                {
-                  "n": "root.go",
-                  "t": "f"
-                }
-              ]
-            },
-            {
-              "n": "go.mod",
-              "t": "f"
-            },
-            {
-              "n": "go.sum",
-              "t": "f"
-            },
-            {
-              "n": "main.go",
-              "t": "f"
-            },
-            {
-              "n": "models",
-              "t": "d",
-              "c": [
-                {
-                  "n": "AgentRequestParams.go",
-                  "t": "f"
-                },
-                {
-                  "n": "astrep.go",
-                  "t": "f"
-                },
-                {
-                  "n": "config.go",
-                  "t": "f"
-                },
-                {
-                  "n": "treenode.go",
-                  "t": "f"
-                }
-              ]
-            },
-            {
-              "n": "output.txt",
-              "t": "f"
-            },
-            {
-              "n": "services",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generateservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "healthservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "initservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "utils",
-                  "t": "d",
-                  "c": [
-                    {
-                      "n": "ASTFieldListToString.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "BuildTree.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "ConvertTreeToJSON.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "DetectLanguages.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetAppName.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetDescription.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetGoASTFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetIgnoredFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetJSONData.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetNameFromPath.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetParentDirectory.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetTextFromFile.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GoASTToJSON.go",
-                      "t": "f"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "n": "test.sh",
-              "t": "f"
-            }
-          ]
+    {'n': 'cmd', 't': 'd', 'c': [
+        {'n': 'generate.go', 't': 'f'
         },
-        "a": [
-          {
-            "f": "generate.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "health.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "init.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "root.go",
-            "s": [
-              {
-                "n": "Execute",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "main.go",
-            "s": [
-              {
-                "n": "main",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "AgentRequestParams.go",
-            "s": []
-          },
-          {
-            "f": "astrep.go",
-            "s": []
-          },
-          {
-            "f": "config.go",
-            "s": []
-          },
-          {
-            "f": "treenode.go",
-            "s": []
-          },
-          {
-            "f": "generateservice.go",
-            "s": [
-              {
-                "n": "GenerateService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "sendAgentParamsToAgentLayer",
-                "p": [
-                  "req: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "healthservice.go",
-            "s": [
-              {
-                "n": "HealthCheck",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "initservice.go",
-            "s": [
-              {
-                "n": "AutodocInitService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "GenerateConfigInPath",
-                "p": [
-                  "content: "
-                ],
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "ASTFieldListToString.go",
-            "s": [
-              {
-                "n": "ASTFieldListToString",
-                "p": [
-                  "fields: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "BuildTree.go",
-            "s": [
-              {
-                "n": "BuildTree",
-                "p": [
-                  "cwd: ",
-                  "name: ",
-                  "ignored: ",
-                  "filetype: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "ConvertTreeToJSON.go",
-            "s": [
-              {
-                "n": "ConvertTreeToJSON",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "DetectLanguages.go",
-            "s": [
-              {
-                "n": "DetectLanguages",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              },
-              {
-                "n": "TraverseTreeForPaths",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              },
-              {
-                "n": "SeparateFileTypes",
-                "p": [
-                  "paths: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetAppName.go",
-            "s": [
-              {
-                "n": "GetAppName",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetDescription.go",
-            "s": [
-              {
-                "n": "GetDescription",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetGoASTFiles.go",
-            "s": [
-              {
-                "n": "GetGoASTFiles",
-                "p": [
-                  "cwd: ",
-                  "paths: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetIgnoredFiles.go",
-            "s": [
-              {
-                "n": "GetIgnoredFiles",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetJSONData.go",
-            "s": [
-              {
-                "n": "GetJSONData",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetNameFromPath.go",
-            "s": [
-              {
-                "n": "GetNameFromPath",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetParentDirectory.go",
-            "s": [
-              {
-                "n": "GetParentDirectory",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetTextFromFile.go",
-            "s": [
-              {
-                "n": "GetTextFromFile",
-                "p": [
-                  "path: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GoASTToJSON.go",
-            "s": [
-              {
-                "n": "GoASTTOJSON",
-                "p": [
-                  "arr: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          }
-        ]
-      }
+        {'n': 'health.go', 't': 'f'
+        },
+        {'n': 'init.go', 't': 'f'
+        },
+        {'n': 'root.go', 't': 'f'
+        }
+      ]
     },
-    {
-      "type": "missing",
-      "loc": [
-        "body",
-        "ast"
-      ],
-      "msg": "Field required",
-      "input": {
-        "n": "Autodoc CLI",
-        "d": "This is the cli layer for a CLI application that auto-documents code.",
-        "t": {
-          "n": "cli",
-          "t": "d",
-          "c": [
-            {
-              "n": "autodoc",
-              "t": "f"
+    {'n': 'go.mod', 't': 'f'
+    },
+    {'n': 'go.sum', 't': 'f'
+    },
+    {'n': 'main.go', 't': 'f'
+    },
+    {'n': 'models', 't': 'd', 'c': [
+        {'n': 'AgentRequestParams.go', 't': 'f'
+        },
+        {'n': 'astrep.go', 't': 'f'
+        },
+        {'n': 'config.go', 't': 'f'
+        },
+        {'n': 'treenode.go', 't': 'f'
+        }
+      ]
+    },
+    {'n': 'output.txt', 't': 'f'
+    },
+    {'n': 'services', 't': 'd', 'c': [
+        {'n': 'generateservice.go', 't': 'f'
+        },
+        {'n': 'healthservice.go', 't': 'f'
+        },
+        {'n': 'initservice.go', 't': 'f'
+        },
+        {'n': 'utils', 't': 'd', 'c': [
+            {'n': 'ASTFieldListToString.go', 't': 'f'
             },
-            {
-              "n": "autodoc_config.json",
-              "t": "f"
+            {'n': 'BuildTree.go', 't': 'f'
             },
-            {
-              "n": "cmd",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generate.go",
-                  "t": "f"
-                },
-                {
-                  "n": "health.go",
-                  "t": "f"
-                },
-                {
-                  "n": "init.go",
-                  "t": "f"
-                },
-                {
-                  "n": "root.go",
-                  "t": "f"
-                }
-              ]
+            {'n': 'ConvertTreeToJSON.go', 't': 'f'
             },
-            {
-              "n": "go.mod",
-              "t": "f"
+            {'n': 'DetectLanguages.go', 't': 'f'
             },
-            {
-              "n": "go.sum",
-              "t": "f"
+            {'n': 'GetAppName.go', 't': 'f'
             },
-            {
-              "n": "main.go",
-              "t": "f"
+            {'n': 'GetDescription.go', 't': 'f'
             },
-            {
-              "n": "models",
-              "t": "d",
-              "c": [
-                {
-                  "n": "AgentRequestParams.go",
-                  "t": "f"
-                },
-                {
-                  "n": "astrep.go",
-                  "t": "f"
-                },
-                {
-                  "n": "config.go",
-                  "t": "f"
-                },
-                {
-                  "n": "treenode.go",
-                  "t": "f"
-                }
-              ]
+            {'n': 'GetGoASTFiles.go', 't': 'f'
             },
-            {
-              "n": "output.txt",
-              "t": "f"
+            {'n': 'GetIgnoredFiles.go', 't': 'f'
             },
-            {
-              "n": "services",
-              "t": "d",
-              "c": [
-                {
-                  "n": "generateservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "healthservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "initservice.go",
-                  "t": "f"
-                },
-                {
-                  "n": "utils",
-                  "t": "d",
-                  "c": [
-                    {
-                      "n": "ASTFieldListToString.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "BuildTree.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "ConvertTreeToJSON.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "DetectLanguages.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetAppName.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetDescription.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetGoASTFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetIgnoredFiles.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetJSONData.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetNameFromPath.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetParentDirectory.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GetTextFromFile.go",
-                      "t": "f"
-                    },
-                    {
-                      "n": "GoASTToJSON.go",
-                      "t": "f"
-                    }
-                  ]
-                }
-              ]
+            {'n': 'GetJSONData.go', 't': 'f'
             },
-            {
-              "n": "test.sh",
-              "t": "f"
+            {'n': 'GetNameFromPath.go', 't': 'f'
+            },
+            {'n': 'GetParentDirectory.go', 't': 'f'
+            },
+            {'n': 'GetTextFromFile.go', 't': 'f'
+            },
+            {'n': 'GoASTToJSON.go', 't': 'f'
             }
           ]
-        },
-        "a": [
-          {
-            "f": "generate.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "health.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "init.go",
-            "s": [
-              {
-                "n": "init",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "root.go",
-            "s": [
-              {
-                "n": "Execute",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "main.go",
-            "s": [
-              {
-                "n": "main",
-                "p": null,
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "AgentRequestParams.go",
-            "s": []
-          },
-          {
-            "f": "astrep.go",
-            "s": []
-          },
-          {
-            "f": "config.go",
-            "s": []
-          },
-          {
-            "f": "treenode.go",
-            "s": []
-          },
-          {
-            "f": "generateservice.go",
-            "s": [
-              {
-                "n": "GenerateService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "sendAgentParamsToAgentLayer",
-                "p": [
-                  "req: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "healthservice.go",
-            "s": [
-              {
-                "n": "HealthCheck",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "initservice.go",
-            "s": [
-              {
-                "n": "AutodocInitService",
-                "p": null,
-                "r": null
-              },
-              {
-                "n": "GenerateConfigInPath",
-                "p": [
-                  "content: "
-                ],
-                "r": null
-              }
-            ]
-          },
-          {
-            "f": "ASTFieldListToString.go",
-            "s": [
-              {
-                "n": "ASTFieldListToString",
-                "p": [
-                  "fields: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "BuildTree.go",
-            "s": [
-              {
-                "n": "BuildTree",
-                "p": [
-                  "cwd: ",
-                  "name: ",
-                  "ignored: ",
-                  "filetype: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "ConvertTreeToJSON.go",
-            "s": [
-              {
-                "n": "ConvertTreeToJSON",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "DetectLanguages.go",
-            "s": [
-              {
-                "n": "DetectLanguages",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              },
-              {
-                "n": "TraverseTreeForPaths",
-                "p": [
-                  "tree: "
-                ],
-                "r": [
-                  ""
-                ]
-              },
-              {
-                "n": "SeparateFileTypes",
-                "p": [
-                  "paths: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetAppName.go",
-            "s": [
-              {
-                "n": "GetAppName",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetDescription.go",
-            "s": [
-              {
-                "n": "GetDescription",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetGoASTFiles.go",
-            "s": [
-              {
-                "n": "GetGoASTFiles",
-                "p": [
-                  "cwd: ",
-                  "paths: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetIgnoredFiles.go",
-            "s": [
-              {
-                "n": "GetIgnoredFiles",
-                "p": [
-                  "cfg: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetJSONData.go",
-            "s": [
-              {
-                "n": "GetJSONData",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetNameFromPath.go",
-            "s": [
-              {
-                "n": "GetNameFromPath",
-                "p": [
-                  "d: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetParentDirectory.go",
-            "s": [
-              {
-                "n": "GetParentDirectory",
-                "p": null,
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GetTextFromFile.go",
-            "s": [
-              {
-                "n": "GetTextFromFile",
-                "p": [
-                  "path: "
-                ],
-                "r": [
-                  "",
-                  ""
-                ]
-              }
-            ]
-          },
-          {
-            "f": "GoASTToJSON.go",
-            "s": [
-              {
-                "n": "GoASTTOJSON",
-                "p": [
-                  "arr: "
-                ],
-                "r": [
-                  ""
-                ]
-              }
-            ]
-          }
-        ]
-      }
+        }
+      ]
+    },
+    {'n': 'test.sh', 't': 'f'
     }
   ]
-}
+} a=[
+  {'f': 'generate.go', 's': [
+      {'n': 'init', 'p': None, 'r': None
+      }
+    ]
+  },
+  {'f': 'health.go', 's': [
+      {'n': 'init', 'p': None, 'r': None
+      }
+    ]
+  },
+  {'f': 'init.go', 's': [
+      {'n': 'init', 'p': None, 'r': None
+      }
+    ]
+  },
+  {'f': 'root.go', 's': [
+      {'n': 'Execute', 'p': None, 'r': None
+      }
+    ]
+  },
+  {'f': 'main.go', 's': [
+      {'n': 'main', 'p': None, 'r': None
+      }
+    ]
+  },
+  {'f': 'AgentRequestParams.go', 's': []
+  },
+  {'f': 'astrep.go', 's': []
+  },
+  {'f': 'config.go', 's': []
+  },
+  {'f': 'treenode.go', 's': []
+  },
+  {'f': 'generateservice.go', 's': [
+      {'n': 'GenerateService', 'p': None, 'r': None
+      },
+      {'n': 'sendAgentParamsToAgentLayer', 'p': ['req: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'healthservice.go', 's': [
+      {'n': 'HealthCheck', 'p': None, 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'initservice.go', 's': [
+      {'n': 'AutodocInitService', 'p': None, 'r': None
+      },
+      {'n': 'GenerateConfigInPath', 'p': ['content: '
+        ], 'r': None
+      }
+    ]
+  },
+  {'f': 'ASTFieldListToString.go', 's': [
+      {'n': 'ASTFieldListToString', 'p': ['fields: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'BuildTree.go', 's': [
+      {'n': 'BuildTree', 'p': ['cwd: ', 'name: ', 'ignored: ', 'filetype: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'ConvertTreeToJSON.go', 's': [
+      {'n': 'ConvertTreeToJSON', 'p': ['tree: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'DetectLanguages.go', 's': [
+      {'n': 'DetectLanguages', 'p': ['tree: '
+        ], 'r': ['', ''
+        ]
+      },
+      {'n': 'TraverseTreeForPaths', 'p': ['tree: '
+        ], 'r': [''
+        ]
+      },
+      {'n': 'SeparateFileTypes', 'p': ['paths: '
+        ], 'r': ['', ''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetAppName.go', 's': [
+      {'n': 'GetAppName', 'p': ['cfg: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetDescription.go', 's': [
+      {'n': 'GetDescription', 'p': ['cfg: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetGoASTFiles.go', 's': [
+      {'n': 'GetGoASTFiles', 'p': ['cwd: ', 'paths: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetIgnoredFiles.go', 's': [
+      {'n': 'GetIgnoredFiles', 'p': ['cfg: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetJSONData.go', 's': [
+      {'n': 'GetJSONData', 'p': ['d: '
+        ], 'r': ['', ''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetNameFromPath.go', 's': [
+      {'n': 'GetNameFromPath', 'p': ['d: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetParentDirectory.go', 's': [
+      {'n': 'GetParentDirectory', 'p': None, 'r': [''
+        ]
+      }
+    ]
+  },
+  {'f': 'GetTextFromFile.go', 's': [
+      {'n': 'GetTextFromFile', 'p': ['path: '
+        ], 'r': ['', ''
+        ]
+      }
+    ]
+  },
+  {'f': 'GoASTToJSON.go', 's': [
+      {'n': 'GoASTTOJSON', 'p': ['arr: '
+        ], 'r': [''
+        ]
+      }
+    ]
+  }
+]
