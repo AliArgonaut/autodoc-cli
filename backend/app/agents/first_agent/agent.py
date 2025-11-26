@@ -1,21 +1,58 @@
-from google.adk.agents.llm_agent import SequentialAgent, ParallelAgent, LLMAgent
+from google.adk.agents import SequentialAgent, ParallelAgent
+from google.adk.agents.llm_agent import LlmAgent
 
 model = "gemini-2.5-flash-lite"
 
-introduction_agent = LLMAgent(
+introduction_agent = LlmAgent(
     model=model,
     name="introduction_agent",
-    description="""given information about a project, generate, in markdown language ONLY, an introduction to a professional production README.md file 
-        the intro should cover the project name and project description. Answer questions like "what is this project, what does it do, who made it, why?" 
-        your output is put in the {intro_draft}. Be sure to create appropriate markdown elements that fit a production README. 
-        """,
+    description="""given information about a project, generate, in markdown language ONLY, an introduction 
+    to a professional production README.md file 
+    the intro should cover the project name and project description. Answer questions like "what is this project, what does it do, who made it, why?" 
+    your output is put in the {intro_draft}. Be sure to create appropriate markdown elements that fit a production README. Use only the fields from the original payload:
+    n (program name), d (program description), t (filetree)
+    """,
     output_key="intro_draft"
 )
 
-utility_agent = LLMAgent(
+utility_agent = LlmAgent(
     model=model,
     name="utility_agent",
-    description="given information about a project, generate, in markdown language, "
+    description="""given information about a project, generate, in markdown language, a guide to installing and using the application. 
+        have code examples or terminal arguments as markdown elements in the result. Use only the fields from the original payload:
+         t (filetree), a (function signatures)
+""",
+    output_key="usage_draft"
+)
+
+judger_agent = LlmAgent(
+    model=model,
+    name="judger_agent",
+    description="""You are the reviewer of documentation drafts.
+    Given the project payload and the outputs from subagents:
+    - intro_draft
+    - usage_draft
+    - funcdoc_draft
+    Check for:
+      1. Accuracy: do the drafts match the project name, description, and functions?
+      2. Completeness: are all important sections present?
+      3. Markdown formatting: headings, code blocks, lists, etc.
+    Return an object with validated drafts after making improvements if needed.
+    """,
+    output_key="validated_docs"
+)
+
+funcdoc_agent = LlmAgent(
+    model=model,
+    name="funcdoc_agent",
+    description="""given information about a project, generate, 
+    in markdown language, a reference for the functions in the project. focus on important
+    functions and services only, and give a more technical guide to understanding the codebase itself. 
+    Use only the fields from the original payload:
+         t (filetree), a (function signatures)
+    """,
+    output_key="funcdoc_draft"
+
 )
 
 parallel_documentation_team = ParallelAgent(
@@ -24,42 +61,7 @@ parallel_documentation_team = ParallelAgent(
 )
 
 root_agent = SequentialAgent(
-    model=model,
     name='root_agent',
-    description="the first reciever of a data object of class AgentContext",
-    instruction="""you will receive  payload with info about a software module.
-    The payload has four main parts:
-        1. n – The name of the module or application.
-        Example: "Autodoc CLI"
-        2. d – A short description of the module.
-        Example: "the CLI layer for a CLI application that auto-documents code"
-        3. t – The file tree for the module. Each node has:
-            n: the name of the file or directory
-            t: the type (d for directory, f for file)
-            c: a list of children if the node is a directory
-            Example:
-            {
-                "n": "cmd",
-                "t": "d",
-                "c": [
-                    {"n": "generate.go", "t": "f"},
-                    {"n": "health.go", "t": "f"}
-                ]
-            }
-        4. a – Function metadata for each file. Each entry includes:
-            f: the file name
-            s: a list of functions in that file. Each function has:
-            n: function name
-            p: parameters (may be null)
-            r: return values (may be null)
-            Example:
-            {
-                "f": "generate.go",
-                "s": [
-                    {"n": "init", "p": null, "r": null}
-                ]
-            }
-        Your goal is to run each subagent with appropriate context
-            """,
+    description="the first reciever of a piece of sotfware's metadata. Call the sub agents in order and then feed their collective outputs to a judger agent. Then, return the judger agent's validated_docs text ",
     sub_agents=[parallel_documentation_team, judger_agent]
 )

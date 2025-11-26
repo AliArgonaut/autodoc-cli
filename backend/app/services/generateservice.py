@@ -1,16 +1,18 @@
 from ..models.AgentContext import AgentContext
-from google.adk.runners import Runner
-from ..agents.first_agent import root_agent
+from google.adk.runners import InMemoryRunner
+from app.agents.first_agent.agent import root_agent
 
 
-def generate(params: AgentContext):
-
+async def generate(params: AgentContext):
     prompt = f"""
     programName : {params.n},
     programDescription: {params.d},
     programFileTree: {params.t},
     programFunctionSignatures: {params.a}
     """
-    runner = Runner(agent=root_agent)
-    response = runner.run(prompt)
-    print(response)
+    runner = InMemoryRunner(agent=root_agent)
+    response = await runner.run_debug(prompt)
+    print("========================================================================================================")
+    print(response["validated_docs"])
+    print("========================================================================================================")
+    return response["validated_docs"]
