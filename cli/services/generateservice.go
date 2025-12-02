@@ -4,6 +4,7 @@ import (
 	"cli/services/utils"
 	"fmt"
 	"log"
+	"strings"
 )
 
 func GenerateService() {
@@ -20,14 +21,20 @@ func GenerateService() {
 	description := utils.GetDescription(config)
 	appName := utils.GetAppName(config)
 	node := utils.BuildTree(cwd, name, ignoredFiles, "d")
+	treeAsJSON := utils.ConvertTreeToJSON(node)
 
 	allpaths := utils.TraverseTreeForPaths(node)
 	langpaths := utils.GetLanguageFilesFromAllPaths(allpaths)
-	text = utils.ReadLanguageFiles(langpaths)
+	text := utils.ReadLanguagePaths(langpaths)
 
-	fmt.Println(description)
-	fmt.Println(appName)
-	fmt.Println(langpaths)
-	// treeAsJSON := utils.ConvertTreeToJSON(node)
+	var sb strings.Builder
+	sb.WriteString("program name: " + appName + "\n")
+	sb.WriteString("program description: " + description + "\n")
+	sb.WriteString("======FILE TREE=========" + "\n")
+	sb.WriteString(string(treeAsJSON) + "\n")
+	sb.WriteString("=======CODE (BY FILE)==========" + "\n")
+	sb.WriteString(text)
+
+	fmt.Println(sb.String())
 
 }
