@@ -12,7 +12,7 @@ async def generate(params: AgentContext):
     """
     runner = InMemoryRunner(agent=root_agent)
     response = await runner.run_debug(prompt)
-    print("========================================================================================================")
-    print(response["validated_docs"])
-    print("========================================================================================================")
-    return response["validated_docs"]
+    print("SSS=====================================================================================================")
+    print(response)
+    print("EEE=====================================================================================================")
+    return response
