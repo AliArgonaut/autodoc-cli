@@ -1,14 +1,9 @@
 package services
 
 import (
-	"bytes"
-	"cli/models"
 	"cli/services/utils"
-	"encoding/json"
 	"fmt"
-	"io"
 	"log"
-	"net/http"
 )
 
 func GenerateService() {
@@ -25,6 +20,14 @@ func GenerateService() {
 	description := utils.GetDescription(config)
 	appName := utils.GetAppName(config)
 	node := utils.BuildTree(cwd, name, ignoredFiles, "d")
-	treeAsJSON := utils.ConvertTreeToJSON(node)
+
+	allpaths := utils.TraverseTreeForPaths(node)
+	langpaths := utils.GetLanguageFilesFromAllPaths(allpaths)
+	text = utils.ReadLanguageFiles(langpaths)
+
+	fmt.Println(description)
+	fmt.Println(appName)
+	fmt.Println(langpaths)
+	// treeAsJSON := utils.ConvertTreeToJSON(node)
 
 }

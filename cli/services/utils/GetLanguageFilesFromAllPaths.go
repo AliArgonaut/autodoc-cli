@@ -77,7 +77,7 @@ func hash(key string) int {
 	for _, char := range key {
 		sum += int(char)
 	}
-	return sum
+	return (sum % 7)
 }
 
 func Init() *HashTable {
