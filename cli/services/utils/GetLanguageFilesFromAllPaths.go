@@ -2,6 +2,7 @@ package utils
 
 import (
 	"fmt"
+	"path/filepath"
 )
 
 // ----------------------HASHMAP----------------------------------
@@ -100,8 +101,19 @@ func GetLanguageFilesFromAllPaths(paths []string) []string {
 		".js",
 	}
 
+	var languageFiles = []string{}
+
 	table := Init()
 	for _, fileType := range supportedLangs {
 		table.Insert(fileType)
 	}
+
+	for _, path := range paths {
+		extension := filepath.Ext(path)
+		if table.Search(extension) {
+			languageFiles = append(languageFiles, path)
+		}
+		continue
+	}
+	return languageFiles
 }
