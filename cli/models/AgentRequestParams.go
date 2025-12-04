@@ -1,12 +1,8 @@
 package models
 
-import (
-	"encoding/json"
-)
-
 type AgentRequestParams struct {
-	AppName     string          `json:"n"`
-	Description string          `json:"d"`
-	Filetree    json.RawMessage `json:"t"`
-	Contents    json.RawMessage `json:"a"`
+	AppName     string     `json:"app_name"`
+	Description string     `json:"description"`
+	Filetree    TreeNode   `json:"Filetree"`
+	Contents    []CodeFile `json:"Code"`
 }

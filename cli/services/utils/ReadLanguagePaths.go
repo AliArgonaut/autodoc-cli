@@ -1,27 +1,29 @@
 package utils
 
 import (
-	"fmt"
+	"cli/models"
 	"os"
 	"regexp"
 	"strings"
 )
 
-func ReadLanguagePaths(paths []string) string {
-	var sb strings.Builder
+func ReadLanguagePaths(paths []string) ([]models.CodeFile, error) {
+
+	var result = []models.CodeFile{}
+
 	spaceRegex := regexp.MustCompile(`\s+`)
 	for _, v := range paths {
 		fileContent, err := os.ReadFile(v)
 		if err != nil {
-			fmt.Println("error reading file")
+			return nil, err
 		}
-		sb.WriteString(fmt.Sprintf("========== %s ==========", v))
 
-		codeLine := strings.TrimSpace(spaceRegex.ReplaceAllString(string(fileContent), " "))
+		code := strings.TrimSpace(spaceRegex.ReplaceAllString(string(fileContent), " "))
+		result = append(result, models.CodeFile{
+			Filename: v,
+			Code:     code,
+		})
 
-		sb.WriteString("\n")
-		sb.Write([]byte(codeLine))
-		sb.WriteString("\n")
 	}
-	return sb.String()
+	return result, nil
 }
