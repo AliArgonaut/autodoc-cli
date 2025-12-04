@@ -46,5 +46,8 @@ func GenerateService() {
 	}
 
 	resp, err := http.Post("http://localhost:8000/api/generate", "application/json", bytes.NewReader(finalRequestBytes))
+	if err != nil {
+		fmt.Println("request error")
+	}
 	fmt.Println(resp)
 }
