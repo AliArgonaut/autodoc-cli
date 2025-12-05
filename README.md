@@ -195,9 +195,6 @@ This file contains utility functions for the project.
     -   **Description**: A helper function that performs a specific calculation.
     -   **Input**: `number` (type: int) - The input number.
     -   **Output**: (type: int) - The result of the calculation.
-```
-
-*(Note: The actual generated README content will depend on the analysis of your specific codebase.)*
 
 ## Contributing
 
