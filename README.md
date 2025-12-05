@@ -174,28 +174,6 @@ from utils import helper_function
 result = helper_function(10)
 print(result)
 ```
-
-## Codebase Overview
-
-### `main.py`
-
-This file serves as the main entry point for the application.
-
-- **`main_function(input_data)`**:
-    -   **Description**: Processes the input data and orchestrates other operations.
-    -   **Input**: `input_data` (type: any) - The data to be processed.
-    -   **Output**: (type: any) - The result of the processing.
-    -   **References**: Calls `helper_function` from `utils.py`.
-
-### `utils.py`
-
-This file contains utility functions for the project.
-
--   **`helper_function(number)`**:
-    -   **Description**: A helper function that performs a specific calculation.
-    -   **Input**: `number` (type: int) - The input number.
-    -   **Output**: (type: int) - The result of the calculation.
-
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
