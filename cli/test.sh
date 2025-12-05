@@ -21,4 +21,4 @@ echo "Done."
 echo "running commands"
 ./autodoc health
 ./autodoc init
-./autodoc generate > "output.txt"
+./autodoc generate > "output.md"

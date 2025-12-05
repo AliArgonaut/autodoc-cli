@@ -1,9 +1,0 @@
-&{0xc00020e040 {{} {0 0}} false <nil> 0x660d40 0x660e20}
-Response status: 200
-Response body length: 57
-Response body preview: {"success":true,"documentation":"hello from the backend"}
-Success field: true
-Documentation length: 22
-
-=== DOCUMENTATION ===
-hello from the backend
