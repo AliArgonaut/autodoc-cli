@@ -6,5 +6,4 @@ router = APIRouter()
 
 @router.post("/generate", response_model=None)
 async def generate_route(req: AgentRequestParams):
-    result = await generateservice.generate(req)
-    return result
+    return await generateservice.generate(req)

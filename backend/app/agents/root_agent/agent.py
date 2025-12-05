@@ -1,8 +1,10 @@
-from google.adk.agents.llm_agent import Agent
+from google.adk.agents import SequentialAgent
+from ..CodeParsingAgent.agent import Code_Parsing_Agent
+from ..DocsWriterAgent.agent import Docs_Writer_Agent
 
-root_agent = Agent(
-    model='gemini-2.5-flash',
-    name='root_agent',
-    description='A helpful assistant for user questions.',
-    instruction='Answer user questions to the best of your knowledge',
+
+root_agent = SequentialAgent(
+    name="root_agent",
+    sub_agents=[Code_Parsing_Agent, Docs_Writer_Agent],
+    description="a pipeline for documenting code automatically"
 )
