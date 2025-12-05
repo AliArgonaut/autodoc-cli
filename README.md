@@ -23,8 +23,8 @@ This project provides a command-line interface (CLI) tool for automatically gene
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your_username/Autodoc_Cli.git
-    cd Autodoc_Cli
+    git clone https://github.com/AliArgonaut/Auto-Doc_Release.git
+    cd Auto-Doc_Release
     ```
 
 2.  **Set up the Backend**:
