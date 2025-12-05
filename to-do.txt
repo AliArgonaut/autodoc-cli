@@ -1,6 +1,0 @@
-CHECKLIST FOR NEXT 
--[] create git branch for changing generation service 
-    change it so that an agent sums up every file and then passes it to finer level agents to build docs
--[] create command to set api key
--[] create readme and publish
-    

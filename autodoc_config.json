@@ -1,0 +1,13 @@
+{
+  "name": "Autodoc Cli",
+  "developer": "AliArgonaut",
+  "description": "create beautiful readme files with agents",
+  "ignore": [
+    ".env",
+    "venv",
+    ".gitignore",
+    ".git",
+    "tests",
+    "__pycache__"
+  ]
+}
