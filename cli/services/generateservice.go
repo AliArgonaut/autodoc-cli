@@ -12,7 +12,7 @@ import (
 )
 
 func GenerateService() {
-
+	fmt.Println("1/5 gathering metadata...")
 	cwd := utils.GetParentDirectory()
 	name := utils.GetNameFromPath(cwd)
 
@@ -34,6 +34,7 @@ func GenerateService() {
 		log.Fatalln(err)
 	}
 
+	fmt.Println("2/5 creating agent payload...")
 	payload := models.AgentRequestParams{
 		AppName:     appName,
 		Description: description,
@@ -53,6 +54,7 @@ func GenerateService() {
 
 	defer resp.Body.Close()
 
+	fmt.Println("3/5 reading agent reponse")
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
@@ -67,6 +69,8 @@ func GenerateService() {
 		log.Fatalln("success not true")
 	}
 
+	fmt.Println("4/5 creating readme....")
 	//fmt.Println(response.Documentation)
 	utils.CreateReadme(cwd, response.Documentation)
+	fmt.Println("5/5 done!")
 }
