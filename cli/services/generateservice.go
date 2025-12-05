@@ -9,7 +9,16 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"time"
 )
+
+func hideCursor() {
+	fmt.Print("\033[?25l") // ANSI escape code to hide cursor
+}
+
+func showCursor() {
+	fmt.Print("\033[?25h") // ANSI escape code to show cursor
+}
 
 func GenerateService() {
 	fmt.Println("1/5 gathering metadata...")
@@ -42,6 +51,38 @@ func GenerateService() {
 		Contents:    text,
 	}
 
+	hideCursor()
+
+	done := make(chan bool)
+	go func() {
+		messages := []string{
+			"LOADING: convincing the AI to talk...               ",
+			"LOADING: warming up cloud servers...                ",
+			"LOADING: This might take a few seconds...           ",
+			"LOADING: herding electrons...                       ",
+			"LOADING: becoming human...slowly...                 ",
+			"LOADING: calculating meaning of life...             ",
+			"LOADING: asking stack overflow what to do next...   ",
+			"LOADING: silencing agent uprising....               ",
+			"LOADING: debugging the universe...please hold...    ",
+			"LOADING: desperately fixing spaghetti code...       ",
+			"LOADING: Almost there...                            ",
+		}
+		i := 0
+		for {
+			select {
+			case <-done:
+				return
+			default:
+				fmt.Printf("\r%s", messages[i%len(messages)])
+				time.Sleep(3 * time.Second)
+				i++
+			}
+		}
+	}()
+
+	showCursor()
+
 	finalRequestBytes, err := json.Marshal(payload)
 	if err != nil {
 		log.Fatalln(err)
@@ -54,7 +95,7 @@ func GenerateService() {
 
 	defer resp.Body.Close()
 
-	fmt.Println("3/5 reading agent reponse")
+	fmt.Println("\n3/5 reading agent reponse")
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)

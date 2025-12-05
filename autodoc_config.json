@@ -1,0 +1,10 @@
+{
+  "name": "auto-doc cli",
+  "developer": "AliArgonaut",
+  "description": "generate beautiful readmes with agents.",
+  "ignore": [
+    ".env",
+    "venv",
+    ".gitignore"
+  ]
+}
