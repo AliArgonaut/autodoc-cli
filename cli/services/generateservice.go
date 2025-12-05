@@ -67,5 +67,6 @@ func GenerateService() {
 		log.Fatalln("success not true")
 	}
 
-	fmt.Println(response.Documentation)
+	//fmt.Println(response.Documentation)
+	utils.CreateReadme(cwd, response.Documentation)
 }
