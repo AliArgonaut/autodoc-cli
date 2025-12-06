@@ -1,5 +1,5 @@
 # Autodoc Cli
-![Documented by Autodoc](https://img.shields.io/badge/Documented%20by-Autodoc-blue?style=for-the-badge&logo=readthedocs)
+[![Documented by Autodoc](https://img.shields.io/badge/Documented%20by-Autodoc-blue?style=for-the-badge&logo=readthedocs)](https://github.com/AliArgonaut/autodoc-cli)
 
 This project provides a command-line interface (CLI) tool for automatically generating documentation for your projects. It leverages AI agents to analyze your codebase and create comprehensive README files.
 
