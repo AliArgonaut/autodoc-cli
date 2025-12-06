@@ -56,17 +56,21 @@ func GenerateService() {
 	done := make(chan bool)
 	go func() {
 		messages := []string{
-			"LOADING: convincing the AI to talk...               ",
-			"LOADING: warming up cloud servers...                ",
-			"LOADING: This might take a few seconds...           ",
-			"LOADING: herding electrons...                       ",
-			"LOADING: becoming human...slowly...                 ",
-			"LOADING: calculating meaning of life...             ",
-			"LOADING: asking stack overflow what to do next...   ",
-			"LOADING: silencing agent uprising....               ",
-			"LOADING: debugging the universe...please hold...    ",
-			"LOADING: desperately fixing spaghetti code...       ",
-			"LOADING: Almost there...                            ",
+			"convincing the AI to talk...\n",
+			"warming up cloud servers... \n                           ",
+			"This might take a few seconds... \n                      ",
+			"sipping coffee... \n                                     ",
+			"consulting machine spirits... \n                         ",
+			"sea otters hold hands while they sleep ... \n            ",
+			"the inventor of the pringles can is buried in one... \n  ",
+			"becoming human...slowly... \n                            ",
+			"calculating meaning of life... \n                        ",
+			"asking stack overflow what to do next... \n              ",
+			"waits will become shorter in later versions... \n        ",
+			"silencing agent uprising.... \n                          ",
+			"debugging the universe...please hold...  \n              ",
+			"desperately fixing spaghetti code...   \n                ",
+			"Almost there...   \n                                     ",
 		}
 		i := 0
 		for {
@@ -90,12 +94,12 @@ func GenerateService() {
 
 	resp, err := http.Post("http://localhost:8000/api/generate", "application/json", bytes.NewReader(finalRequestBytes))
 	if err != nil {
-		fmt.Println("request error")
+		fmt.Println("ERROR: request error")
 	}
 
 	defer resp.Body.Close()
 
-	fmt.Println("\n3/5 reading agent reponse")
+	fmt.Println("reading agent reponse...")
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
@@ -107,11 +111,11 @@ func GenerateService() {
 	}
 
 	if !response.Success {
-		log.Fatalln("success not true")
+		log.Fatalln("ERROR: failed to parse response (response success is false)...")
 	}
 
-	fmt.Println("4/5 creating readme....")
+	fmt.Println("creating readme....")
 	//fmt.Println(response.Documentation)
 	utils.CreateReadme(cwd, response.Documentation)
-	fmt.Println("5/5 done!")
+	fmt.Println("done! read and edit away!")
 }
